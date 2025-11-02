@@ -11,5 +11,8 @@ import  './style.css'
 // import './ejercicios/di37.ts'
 // import './ejercicios/ejercicio9.2.ts'
 // import './topics/08- clases.ts'
-import './ejercicios/ejercicio3-10.ts'
+// import './ejercicios/ejercicio3-10.ts'
+// import './ejercicios/ejercicio3-11.ts'
+import './ejercicios/ejercicio3-12.ts'
+
 
