@@ -5,7 +5,7 @@ class Persona {
   nombre: string;
   apellidos: string;
   telefono: number;
-  direccion:Direccion;
+  direccion?:Direccion;
   genero: string;
 
   constructor(nombre: string, apellidos: string, telefono: number, direccion: Direccion, genero: string) { 
@@ -19,7 +19,7 @@ class Persona {
     mostrarDatos(): void { // creamos método para mostrar los datos de Persona
     console.log(`Nombre: ${this.nombre} ${this.apellidos}`);
     console.log(`telefono: ${this.telefono}`);
-    console.log(`calle: ${this.direccion.calle}, localidad: ${this.direccion.localidad}, provincia: ${this.direccion.provincia}`);
+    this.direccion;
     console.log(`Género: ${this.genero}`);
 }
 }
@@ -69,9 +69,10 @@ class Equipo{
         console.log(`el nombre del equipo es: ${this.nombre} `);
         console.log(`lo componen estos jugadores:`)
         console.log(`-----------------primer jugador/a--------------------`)
-        console.table(`${this.jugador1.mostrarJugador()} `);
+
+        this.jugador1.mostrarJugador();
         console.log(`-----------------segundx jugador/a--------------------`)
-        console.table(`${this.jugador2.mostrarJugador()} `);
+        this.jugador2.mostrarJugador();
     }
 }
 
@@ -99,9 +100,9 @@ class Partido{
         console.log(`id del partido: ${this.id}`);
         console.log(`equipo ${this.equipo1.nombre} vs ${this.equipo2.nombre}`);
         console.log(`----------------------datos de los equipos y jugadores ---------------------`);
-        console.table(this.equipo1.mostrarEquipo());
+        this.equipo1.mostrarEquipo();
         console.log(`--------------------------------`)
-        console.table(this.equipo2.mostrarEquipo());
+        this.equipo2.mostrarEquipo();
         console.log(`el día ${this.fecha} a las ${this.hora} en ${this.recinto}`);
         console.log(`arbitrado por ${this.arbitro.nombre}`);
     }
@@ -160,5 +161,23 @@ const calendario = new Calendario([partido1, partido2, partido3]);
 // ------------------ Mostrar calendario ------------------
 calendario.mostrarCalendario();
 
+
+let jugadores: Jugador[]=[jugadorA1,jugadorA2,jugadorB1,jugadorB2,jugadorC1,jugadorC2];
+let calendarito: Partido[] = [partido1, partido2, partido3];
+
+
+
 export{};
+let contador:number=1;
+function mostrarElementos<T>(argumento:T[]): void{
+    
+    argumento.forEach((elem , contador)=>{
+        return console.log(`posición ${contador +1} ,`, elem)
+    }
+)
+}
+
+
+mostrarElementos<Partido>(calendarito);
+mostrarElementos<Jugador>(jugadores);
 
