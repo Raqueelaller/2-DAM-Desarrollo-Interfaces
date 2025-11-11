@@ -1,11 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ContadorComponent } from './contador/contador.components';
+import {  ListaComponents } from "./heroes/lista/lista";
+import { HeroeComponents } from './heroes/heroe/heroe';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ContadorComponent, ListaComponents, HeroeComponents ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
    title= 'Ejercicio 4.1 Raquel Aller';
