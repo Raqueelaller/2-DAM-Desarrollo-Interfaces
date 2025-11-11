@@ -27,6 +27,7 @@ export interface Direccion{ // creamos la interfaz Dirección
     cp:number;
     localidad:string;
     provincia:string;
+
 }
 
 //creamos la función matricularAlumno la cual le pasamos por parámetros un alumno y un instituto

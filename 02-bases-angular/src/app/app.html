@@ -1,5 +1,8 @@
 <h1>{{ title}}</h1>
 <br>
 <p>
-  Bienvenida a Angular!
-</p>
+ <h2> Contador: {{contador}}</h2>
+ <h2>Cantidad: {{cantidad}}</h2>
+ <button (click)="incrementar()"> Incrementar: {{cantidad}}</button>
+ <button (click)="decrementar()"> Decrementar: {{cantidad}}</button>
+ <button (click)="resetear()"> Resetear</button>

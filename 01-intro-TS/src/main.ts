@@ -13,6 +13,8 @@ import  './style.css'
 // import './topics/08- clases.ts'
 // import './ejercicios/ejercicio3-10.ts'
 // import './ejercicios/ejercicio3-11.ts'
-import './ejercicios/ejercicio3-12.ts'
+// import './ejercicios/ejercicio3-12.ts'
+import './ejercicios/ejercicio3.12.2.ts'
+
 
 
