@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-heroe',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './heroe.html',
   styleUrl: './heroe.css',
 })
 export class HeroeComponents {
-  public nombre :string = "Son goku";
+  public nombre :string = "Goku";
   public edad : number = 32;
 
   public get nombreCapitalizado(): string {
@@ -37,7 +38,7 @@ export class HeroeComponents {
 
   public cambiarEdad(){
 
-    this.edad = this.edad +1;
+    this.edad = 41;
   }
 
 

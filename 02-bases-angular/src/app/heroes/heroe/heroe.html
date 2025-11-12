@@ -16,11 +16,14 @@
   <dd>{{getDescripcionHeroe()}}</dd>
 </dl>
 
-<button class= "btn btn-primary" (click)="cambiarNombre()">
+<button *ngIf="nombre=='Goku'" class= "btn btn-primary" (click)="cambiarNombre()">
   Cambiar nombre
 </button>
 
+@if ((edad==32)) {
 <button class="btn btn-primary" (click)="cambiarEdad()">
   Cambiar edad
 </button>
+}
+
 

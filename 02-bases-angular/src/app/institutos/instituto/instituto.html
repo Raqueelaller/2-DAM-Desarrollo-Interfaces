@@ -1,0 +1,15 @@
+<dl class="container mt-4">
+<td><u>Centro educativo:</u></td>
+<dd>{{nombre}}</dd>
+<td><u>Localidad</u></td>
+<dd>{{localidad}}</dd>
+<td><u>Familias profesionales</u></td>
+<dd>{{familiasProfesionales}}</dd>
+<td><u>Centro</u></td>
+<dd>{{getNombreCapitalizado()}}</dd>
+<td><u>logo</u></td>
+<dd><img [src]="logo" alt="Logo del Instituto" width="100"></dd>
+</dl>
+<button class= "btn btn-danger ms-2" (click)="cambiarInstituto()">
+Cambiar Instituto
+</button>
