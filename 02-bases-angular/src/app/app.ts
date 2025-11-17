@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ContadorComponent } from './contador/contador.components';
 import {  ListaComponents } from "./heroes/lista/lista";
 import { HeroeComponents } from './heroes/heroe/heroe';
-import { InstitutoComponent } from './institutos/instituto/instituto';
+import { Insti, InstitutoComponent } from './institutos/instituto/instituto';
 @Component({
   selector: 'app-root',
   imports: [ContadorComponent, ListaComponents, HeroeComponents, InstitutoComponent],
