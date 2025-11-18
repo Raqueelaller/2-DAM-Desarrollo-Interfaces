@@ -12,6 +12,7 @@ import { Component } from "@angular/core";
  <button (click)="decrementar()"> Decrementar: {{cantidad}}</button>
  <button (click)="resetear()"> Resetear</button>`
  ,
+ standalone: false
 })
 export class ContadorComponent{
    title= 'Ejercicio 4.1 Raquel Aller';

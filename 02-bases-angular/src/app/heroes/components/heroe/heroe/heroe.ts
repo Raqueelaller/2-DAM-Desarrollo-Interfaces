@@ -3,9 +3,9 @@ import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-heroe',
-  imports: [CommonModule],
   templateUrl: './heroe.html',
   styleUrl: './heroe.css',
+  standalone:false
 })
 export class HeroeComponents {
   public nombre :string = "Goku";

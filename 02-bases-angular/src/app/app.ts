@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ContadorComponent } from './contador/contador.components';
-import {  ListaComponents } from "./heroes/lista/lista";
-import { HeroeComponents } from './heroes/heroe/heroe';
-import { Insti, InstitutoComponent } from './institutos/instituto/instituto';
+import { Component } from '@angular/core';
+import { ContadorModule } from './contador/contador.module';
+import { InstitutoComponent } from './institutos/instituto/instituto';
+import { HeroeModule } from './heroes/heroe.module';
 @Component({
   selector: 'app-root',
-  imports: [ContadorComponent, ListaComponents, HeroeComponents, InstitutoComponent],
+  imports: [ContadorModule,HeroeModule, InstitutoComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
