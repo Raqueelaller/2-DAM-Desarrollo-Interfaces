@@ -59,11 +59,38 @@ export class InstitutoComponent {
   public contador : number = 0;
 
 
-  public mostrarInstituto(posicion :number): String{
-    return `${this.listaInsti[posicion]}`;
+  public mostrarInstituto(posicion :number): Insti |null{
+   if(posicion<0){
+    return null
+   }
+
+    const instituto = this.listaInsti[posicion];
+    return instituto;
   }
 
 
+  public eliminarInstituto(posicion :number):void{
+        if (posicion < 0 || posicion >= this.listaInsti.length) {
+      console.warn('Posición inválida para eliminar');
+      return;
+    }
+
+    const instituto = this.listaInsti.splice(posicion,1)[0];
+    this.pila.push(instituto);
+
+     if (this.listaInsti.length == 0) {
+    this.contador = 0;
+  } else if (this.contador >= this.listaInsti.length) {
+    this.contador = this.listaInsti.length - 1;
+  }
+
+  }
+
+   public recuperarInstituto(posicion :number):void{
+    const instituto = this.pila.pop();
+
+    this.listaInsti.splice(this.contador, 0, instituto!);
+  }
 
 
 }

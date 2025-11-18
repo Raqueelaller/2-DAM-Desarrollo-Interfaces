@@ -1,15 +1,50 @@
 <dl class="container mt-4">
-<td><u>Centro educativo:</u></td>
-<dd>{{nombre}}</dd>
-<td><u>Localidad</u></td>
-<dd>{{localidad}}</dd>
-<td><u>Familias profesionales</u></td>
-<dd>{{familiasProfesionales}}</dd>
-<td><u>Centro</u></td>
-<dd>{{getNombreCapitalizado()}}</dd>
-<td><u>logo</u></td>
-<dd><img [src]="logo" alt="Logo del Instituto" width="100"></dd>
+<td><h1>Centro educativo:</h1></td>
+<dd>
+  @let institutoActual = mostrarInstituto(this.contador);
+@if(institutoActual){
+  <ul class="list-group">
+    <li>{{institutoActual.nombre}}</li>
+  <li>{{institutoActual.localidad}}</li>
+  <li>{{institutoActual.getFamiliasProfesionales()}}</li>
+  <li><img [src]="institutoActual.logo"
+         style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;"></li>
+</ul>}
+@else {
+  <div>
+        No hay instituto disponible en esta posición
+      </div>
+}
+</dd>
 </dl>
-<button class= "btn btn-danger ms-2" (click)="cambiarInstituto()">
-Cambiar Instituto
+<dl class="container mt-4">
+<td><u>Eliminados:</u></td>
+<ul>
+  @for (insti of pila.slice().reverse(); track insti.nombre) {
+    <li>{{ insti.nombre }}</li>
+  }
+</ul>
+</dl>
+@if (this.contador<this.listaInsti.length -1) {
+<button class= "btn btn-danger ms-2" (click)="this.contador=this.contador+1">
+Siguiente
 </button>
+}
+
+@if (this.contador>0) {
+<button class= "btn btn-danger ms-2" (click)="this.contador=this.contador-1">
+Anterior
+</button>
+}
+
+@if (listaInsti.length>=0) {
+  <button class= "btn btn-danger ms-2" (click)="eliminarInstituto(this.contador)">
+Eliminar Instituto
+</button>
+}
+
+@if (pila.length>0) {
+  <button class= "btn btn-danger ms-2" (click)="recuperarInstituto(this.contador)">
+Insertar Instituto
+</button>
+}
