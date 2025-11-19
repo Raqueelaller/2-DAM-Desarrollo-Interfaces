@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ContadorModule } from './contador/contador.module';
 import { InstitutoComponent } from './institutos/instituto/instituto';
-import { HeroeModule } from './heroes/heroe.module';
+import { HeroesModule } from './heroes/heroes.module';
 @Component({
   selector: 'app-root',
-  imports: [ContadorModule,HeroeModule, InstitutoComponent],
+  imports: [ContadorModule,HeroesModule, InstitutoComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
-import { HeroeComponents } from "./components/heroe/heroe/heroe";
-import { ListaComponents } from "./components/heroe/lista/lista";
+import { HeroeComponents } from "./components/heroe/heroe";
+import { ListaComponents } from "./components/lista/lista";
 
 
 
@@ -13,7 +13,7 @@ import { ListaComponents } from "./components/heroe/lista/lista";
   ]
 
 })
-export class HeroeModule{
+export class HeroesModule{
 
 
 }
