@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { ContadorModule } from './contador/contador.module';
 import { InstitutoComponent } from './institutos/instituto/instituto';
 import { HeroesModule } from './heroes/heroes.module';
+import { MainPageComponent } from "./dbz/pages/main-page";
+import { DbzModule } from './dbz/dbz-module';
 @Component({
   selector: 'app-root',
-  imports: [ContadorModule,HeroesModule, InstitutoComponent],
+  imports: [ContadorModule, HeroesModule, InstitutoComponent, DbzModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
