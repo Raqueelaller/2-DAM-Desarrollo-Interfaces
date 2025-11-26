@@ -3,9 +3,9 @@
 
 <div class="row">
   <div class="col">
-    <app-lista></app-lista>
+    <app-lista [listaPersonajes]="personajes"></app-lista>
   </div>
   <div class="col">
-    <app-add-personaje></app-add-personaje>
+    <app-add-personaje (onNewPersonaje)="onMetodoNewPersonaje($event)"></app-add-personaje>
   </div>
 </div>
