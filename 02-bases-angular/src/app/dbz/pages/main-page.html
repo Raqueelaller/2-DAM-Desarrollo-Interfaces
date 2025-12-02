@@ -3,9 +3,10 @@
 
 <div class="row">
   <div class="col">
-    <app-lista [listaPersonajes]="personajes"></app-lista>
+    <app-lista (onDeletePersonaje)="dbzService.onMetodoDeletePersonaje($event)" [listaPersonajes]="dbzService.personajes"></app-lista>
   </div>
   <div class="col">
-    <app-add-personaje (onNewPersonaje)="onMetodoNewPersonaje($event)"></app-add-personaje>
+    <app-add-personaje (onNewPersonaje)="dbzService.onMetodoNewPersonaje($event)"></app-add-personaje>
+
   </div>
 </div>

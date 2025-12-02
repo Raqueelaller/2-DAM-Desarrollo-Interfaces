@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ListaComponents } from '../../../heroes/components/lista/lista';
 import { Personaje } from '../../interfaces/personaje';
 
@@ -11,6 +11,9 @@ import { Personaje } from '../../interfaces/personaje';
 })
 export class ListaComponent {
 
+
+
+
   @Input()
   public listaPersonajes: Personaje[]=[
     {
@@ -20,5 +23,12 @@ export class ListaComponent {
 
 
   ]
+
+ @Output()
+  public onDeletePersonaje: EventEmitter<number> = new EventEmitter();
+
+  public recibirIndice(posicion:number):void{
+    this.onDeletePersonaje.emit(posicion);
+  }
 
 }

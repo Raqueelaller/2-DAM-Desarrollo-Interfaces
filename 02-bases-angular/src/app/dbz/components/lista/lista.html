@@ -7,7 +7,7 @@
       let esUltimo=$last;
       let esPrimero= $first;
       let esImpar= $odd) {
-          <li class="list-group-item"
+          <li class="list-group-item d-flex justify-content-between align-items-center"
           [ngClass]="{
             'list-group-item-primary': esPrimero,
             'list-group-item-secondary': esImpar,
@@ -15,12 +15,17 @@
 
 
           }">
-            <span>{{personaje.nombre}} -</span>
-            <strong> fuerza </strong>
-            <span> {{personaje.fuerza}} </span>
-            <span> Indice: {{i}} - Es par: {{esPar}} - es el último {{esUltimo}}</span>
-            </li>
+            <div>
+              <span>{{personaje.nombre}} -</span>
+              <strong> fuerza </strong>
+              <span> {{personaje.fuerza}} </span>
+              <span> Indice: {{i}} - Es par: {{esPar}} - es el último {{esUltimo}}
+              </span>
+            </div>
+            <button class="btn btn-danger" (click)="recibirIndice(i)">X</button>
+          </li>
           }
+
 
     </ul>
 
