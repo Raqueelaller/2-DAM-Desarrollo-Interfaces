@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ListaComponents } from '../../../heroes/components/lista/lista';
 import { Personaje } from '../../interfaces/personaje';
-
+import{v4 as uuid} from 'uuid';
 @Component({
   selector: 'app-lista',
   // imports: [],
@@ -17,6 +17,7 @@ export class ListaComponent {
   @Input()
   public listaPersonajes: Personaje[]=[
     {
+      id:uuid(),
       nombre: 'Bulma',
       fuerza:10
     }
@@ -25,10 +26,10 @@ export class ListaComponent {
   ]
 
  @Output()
-  public onDeletePersonaje: EventEmitter<number> = new EventEmitter();
+  public onDeletePersonaje: EventEmitter<string> = new EventEmitter();
 
-  public recibirIndice(posicion:number):void{
-    this.onDeletePersonaje.emit(posicion);
+  public eliminarPersonaje(id: string): void {
+    this.onDeletePersonaje.emit(id);
   }
 
 }

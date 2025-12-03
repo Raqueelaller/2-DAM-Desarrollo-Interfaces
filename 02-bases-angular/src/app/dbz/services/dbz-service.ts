@@ -49,18 +49,23 @@ public onMetodoNewPersonaje(personaje: Personaje){
   // this.personajes.push(personaje)
 
   // con spread
-  const newPersonaje:Personaje = {id: uuid(),...personaje}
-  this.personajes.push(newPersonaje);
+  // const newPersonaje:Personaje = {id: uuid(),...personaje}
+  // this.personajes.push(newPersonaje);
 
+    this.personajes.push(personaje);
+
+}
+
+
+// public onMetodoDeletePersonaje(posicion:number):void{
+
+
+//   this.personajes.splice(posicion,1);
+// }
+
+  public onMetodoDeletePersonaje(id: string): void {
+    this.personajes = this.personajes.filter(p => p.id !== id);
+  }
 
 }
 
-
-public onMetodoDeletePersonaje(posicion:number):void{
-
-
-  this.personajes.splice(posicion,1);
-}
-
-
-}

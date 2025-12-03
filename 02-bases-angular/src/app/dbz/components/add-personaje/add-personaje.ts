@@ -1,6 +1,6 @@
 import { Component, EventEmitter, output, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje';
-
+import {v4 as uuid} from 'uuid'
 @Component({
   selector: 'app-add-personaje',
   // imports: [],
@@ -17,6 +17,7 @@ export class AddPersonajeComponet {
 
 
   public personaje: Personaje={
+    id: uuid(),
     nombre: '',
     fuerza: 0
   }
@@ -33,6 +34,7 @@ export class AddPersonajeComponet {
     // this.personaje.nombre= '';
     // this.personaje.fuerza=0;
     this.personaje = {
+      id:uuid(),
       nombre: ' ',
       fuerza: 0
     };
