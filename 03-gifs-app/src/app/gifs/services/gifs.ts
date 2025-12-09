@@ -14,6 +14,7 @@ export class GifsService {
   //agregamos la nueva etiqueta al array
   buscarEtiqueta(etiqueta:string){
     this._historialEtiquetas.unshift(etiqueta);
+    console.log(this._historialEtiquetas)
   }
 
 }
