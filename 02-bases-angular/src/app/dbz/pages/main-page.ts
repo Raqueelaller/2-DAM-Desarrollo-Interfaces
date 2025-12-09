@@ -14,9 +14,18 @@ import { DBZService } from '../services/dbz-service';
 
 export class MainPageComponent{
 
-  constructor(public dbzService: DBZService){
-  }
+  constructor(private  dbzService: DBZService){  }
 
+    get personajes():Personaje[]{
+      return this.dbzService.personajes
+    }
 
+    onDeletePersonajes(id:string){
+      this.dbzService.deletePersonaje(id)
+    }
+
+    onNewPersonaje(personaje:Personaje){
+      this.dbzService.addPersonaje(personaje)
+    }
 
 }

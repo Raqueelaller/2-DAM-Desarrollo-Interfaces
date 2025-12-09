@@ -17,7 +17,7 @@ export class AddPersonajeComponet {
 
 
   public personaje: Personaje={
-    id: uuid(),
+    id: '',
     nombre: '',
     fuerza: 0
   }
@@ -34,7 +34,7 @@ export class AddPersonajeComponet {
     // this.personaje.nombre= '';
     // this.personaje.fuerza=0;
     this.personaje = {
-      id:uuid(),
+      id:'',
       nombre: ' ',
       fuerza: 0
     };

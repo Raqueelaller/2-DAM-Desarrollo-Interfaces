@@ -1,16 +1,12 @@
 {
-  "name": "02-bases-angular",
+  "name": "03-gifs-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:href": "ng build --base-href ./",
-    "build:github": "npm run build:href && npm run delete:docs && npm run copy:dist && git add . && git commit -m 'hecho ebn clase' && git push origin main",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "delete:docs": "del docs",
-    "copy:dist": "copyfiles dist/02-bases-angular/browser/* ./docs/ -f"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -32,11 +28,8 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "@types/uuid": "^10.0.0",
     "rxjs": "~7.8.0",
-    "save-dev": "^0.0.1-security",
     "tslib": "^2.3.0",
-    "uuid": "^13.0.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
@@ -44,8 +37,6 @@
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
-    "copyfiles": "^2.4.1",
-    "del-cli": "^7.0.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

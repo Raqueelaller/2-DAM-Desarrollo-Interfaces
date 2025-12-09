@@ -43,29 +43,15 @@ export class DBZService {
 
 ];
 
-public onMetodoNewPersonaje(personaje: Personaje){
-  // sin spread
-  // personaje.id=uuid();
-  // this.personajes.push(personaje)
-
-  // con spread
-  // const newPersonaje:Personaje = {id: uuid(),...personaje}
-  // this.personajes.push(newPersonaje);
-
+public addPersonaje(personaje: Personaje){
+    personaje.id=uuid();
     this.personajes.push(personaje);
-
 }
 
-
-// public onMetodoDeletePersonaje(posicion:number):void{
-
-
-//   this.personajes.splice(posicion,1);
-// }
-
-  public onMetodoDeletePersonaje(id: string): void {
+public deletePersonaje(id: string): void {
     this.personajes = this.personajes.filter(p => p.id !== id);
-  }
+    console.log("id del personaje eliminado"+id)
+}
 
 }
 
