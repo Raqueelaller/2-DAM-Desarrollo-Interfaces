@@ -14,7 +14,7 @@ export class SidebarComponent {
       constructor(private gifsservice: GifsService){}
 
         get historialEtiquetas(): string[]{
-          return [...this.gifsservice.historialEtiquetas]
+          return this.gifsservice.historialEtiquetas
         }
 
 }
