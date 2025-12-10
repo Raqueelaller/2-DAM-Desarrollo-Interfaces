@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './components/sidebar/sidebar';
+import { GifsModule } from '../gifs/gifs-module';
 
 
 
 @NgModule({
   declarations: [SidebarComponent],
   imports: [
-    CommonModule
+    CommonModule,GifsModule
   ],
   exports:[SidebarComponent]
 })

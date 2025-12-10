@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GifsService } from '../../services/gifs';
 
 @Component({
   selector: 'gifs-home-page',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.css',
 })
 export class HomePageComponent {
+
+    constructor(private gifsservice: GifsService){}
+
+      get historialEtiquetas(): string[]{
+        return [...this.gifsservice.historialEtiquetas]
+      }
+
+
 
 }
