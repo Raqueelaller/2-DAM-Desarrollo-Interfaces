@@ -17,22 +17,26 @@ export class GifsService {
 
 
 
-  //agregamos la nueva etiqueta al array
-  buscarEtiqueta(etiqueta:string){
-      if(this._historialEtiquetas.length>10){
-        this._historialEtiquetas.pop();
-    }
-    etiqueta = etiqueta.trim().toLowerCase();
-    for( let i=0; i<this._historialEtiquetas.length; i ++){
-         if(this._historialEtiquetas.at(i)?.includes(etiqueta)){
-          this._historialEtiquetas.splice(i,i);
-        }
-    }
-    if(etiqueta!== ""){
-      this._historialEtiquetas.unshift(etiqueta);
-      // console.log(this._historialEtiquetas)
+  buscarEtiqueta(etiqueta: string): void {
+
+    if (!etiqueta || etiqueta.trim().length === 0) {
+      return;
     }
 
+
+    const etiquetaNormalizada = etiqueta.trim().toLowerCase();
+
+
+    this._historialEtiquetas = this._historialEtiquetas.filter(
+      item => item.toLowerCase() !== etiquetaNormalizada
+    );
+
+
+    this._historialEtiquetas.unshift(etiqueta);
+
+
+    if (this._historialEtiquetas.length > 10) {
+      this._historialEtiquetas = this._historialEtiquetas.slice(0, 10);
+    }
   }
-
 }
