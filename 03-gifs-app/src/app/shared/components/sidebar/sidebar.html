@@ -7,7 +7,7 @@
 
   @for (etiqueta of historialEtiquetas; track $index) {
 
-        <button class="list-group-item list-group-item-action">
+        <button class="list-group-item list-group-item-action" (click)="buscarEtiqueta(etiqueta)">
           {{etiqueta}}
         </button>
 
