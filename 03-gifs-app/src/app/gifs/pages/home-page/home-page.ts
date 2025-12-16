@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../../services/gifs';
+import { Gif } from '../../interfaces/gifs-interfaces';
 
 @Component({
   selector: 'gifs-home-page',
@@ -11,10 +12,10 @@ export class HomePageComponent {
 
     constructor(private gifsservice: GifsService){}
 
-      get historialEtiquetas(): string[]{
-        return [...this.gifsservice.historialEtiquetas]
+      get gifs(): Gif[]{
+        return this.gifsservice.listadoGifs;
       }
-
+      
 
 
 }
