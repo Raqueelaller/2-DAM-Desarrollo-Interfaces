@@ -1,1 +1,11 @@
-<p>list-page works!</p>
+<h2>Listado</h2>
+
+<ul>
+  @for (hero of heroes; track hero.id) {
+    <li>
+      {{ hero.superhero }} — {{ hero.publisher }}
+    </li>
+  } @empty {
+    <li>No hay héroes cargados</li>
+  }
+</ul>

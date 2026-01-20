@@ -10,20 +10,23 @@ import { SearchPageComponent } from './pages/search-page/search-page';
 import { M } from '@angular/cdk/keycodes';
 import { MaterialModule } from '../material/material-module';
 
-
 @NgModule({
   declarations: [
     HeroPageComponent,
     LayoutPageComponent,
-    ListPageComponent,
     NewPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+
 
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ListPageComponent,
+
   ]
+
+  
 })
 export class HeroesModule { }

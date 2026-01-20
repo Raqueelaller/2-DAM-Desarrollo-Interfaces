@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Hero } from '../../interface/hero-interface';
 @Component({
   selector: 'app-hero-page',
   templateUrl: './hero-page.html',
@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class HeroPageComponent {
-
 }
