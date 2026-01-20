@@ -14,10 +14,13 @@ export class GifsService {
     return [...this._historialEtiquetas]
   }
 
-  private _apiKey: string = "ByfIwSevcptrYRsjOT8QK3cVAm9PuTtd";
+  private _apiKey: string = "wSbHwO3qqHvh2vHDl5NN8hoWHALuVqqc";
   private _serviceUrl: string = "https://api.giphy.com/v1/gifs";
   private http = inject(HttpClient);
 
+  constructor() {
+    this.cargarLocalStorage();
+  }
   buscarEtiqueta(etiqueta: string): void {
 
     if (etiqueta.trim().length === 0) {
@@ -49,8 +52,19 @@ export class GifsService {
         this.listadoGifs = resp.data;
         console.log({gifs: this.listadoGifs})
       })
+      this.almacenarLocalStorage();
  }
 
 
 
+  private almacenarLocalStorage(): void {
+    localStorage.setItem('historialEtiquetas', JSON.stringify(this._historialEtiquetas));
+  }
+
+  private cargarLocalStorage(): void {
+    if(!localStorage.getItem('historialEtiquetas')) return;
+
+    this._historialEtiquetas = JSON.parse(localStorage.getItem('historialEtiquetas')!);
+    this.buscarEtiqueta(this._historialEtiquetas[0]);
+  }
 }
