@@ -23,8 +23,8 @@ import { HeroImagePipe } from './pipes/hero-image-pipe';
     CardComponent,
     HeroImagePipe
 
-    
-    
+
+
 
 
   ],
@@ -32,12 +32,12 @@ import { HeroImagePipe } from './pipes/hero-image-pipe';
     CommonModule,
     HeroesRoutingModule,
     MaterialModule
-    
-    
-    
+
+
+
 
   ]
 
-  
+
 })
 export class HeroesModule { }
