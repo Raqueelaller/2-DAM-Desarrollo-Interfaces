@@ -9,21 +9,32 @@ import { NewPageComponent } from './pages/new-page/new-page';
 import { SearchPageComponent } from './pages/search-page/search-page';
 import { M } from '@angular/cdk/keycodes';
 import { MaterialModule } from '../material/material-module';
+import { CardComponent } from './components/card/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { HeroImagePipe } from './pipes/hero-image-pipe';
 
 @NgModule({
   declarations: [
     HeroPageComponent,
     LayoutPageComponent,
+    ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
+    CardComponent,
+    HeroImagePipe
+
+    
+    
 
 
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule,
-    ListPageComponent,
+    MaterialModule
+    
+    
+    
 
   ]
 

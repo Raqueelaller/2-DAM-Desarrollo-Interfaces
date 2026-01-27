@@ -4,6 +4,7 @@ import { HeroesService } from '../../services/heroes';
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.html',
+  standalone: false
 })
 export class ListPageComponent implements OnInit {
 
