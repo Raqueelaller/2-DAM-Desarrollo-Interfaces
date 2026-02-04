@@ -1,37 +1,42 @@
+
+
 @if (!hero) {
-  <div class="center">
-    <mat-spinner></mat-spinner>
-  </div>
-}@else{
-  <button type="button" (click)="volver()">
-  Volver
-  </button>
-  <div class="grid p-2">
-    <mat-card class="col-12 sm:col-6">
-      <mat-card-header>
-        <mat-card-title>{{hero.alter_ego}}</mat-card-title>
-        <mat-card-subtitle>{{hero.superhero}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="hero | heroImage"  [alt]="hero.superhero">
-    </mat-card>
+	<mat-grid-list cols="1">
+		<mat-grid-tile>
+			<mat-spinner>
 
-    <mat-card class="col-12 sm:col-6">
-      <mat-card-header>
-        <mat-card-title>Información</mat-card-title>
-        <mat-card-subtitle>{{hero.superhero}}</mat-card-subtitle>
-      </mat-card-header>
+			</mat-spinner>
+		</mat-grid-tile>
+	</mat-grid-list>
+} @else () {
+	<div class="grid p-2">
+		<mat-card class="col-12 sm:col-6">
+			<mat-card-header>
+				<mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+				<mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+			</mat-card-header>
+			<img [src]="hero | heroImage" alt="hero.superhero" mat-card-image>
+		</mat-card>
 
-      <mat-card-content>
-        <mat-list>
-          <mat-list-item>{{hero.first_appearance}}</mat-list-item>
-          <mat-list-item>{{hero.characters}}</mat-list-item>
-          <mat-list-item>{{hero.publisher}}</mat-list-item>
-          <mat-list-item>{{hero.alter_ego}}</mat-list-item>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-  </div>
+		<mat-card class="col-12 sm:col-6">
+			<mat-card-header>
+				<mat-card-title>Información</mat-card-title>
+				<mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+			</mat-card-header>
 
+			<mat-card-content>
+				<mat-list>
+					<mat-list-item>{{ hero.first_appearance }}</mat-list-item>
+					<mat-list-item>{{ hero.characters }}</mat-list-item>
+					<mat-list-item>{{ hero.publisher }}</mat-list-item>
+					<mat-list-item>{{ hero.alter_ego }}</mat-list-item>
+				</mat-list>
+
+				<!-- TODO: Crear un botón para volver al listado -->
+         <button mat-button (click)="volver()">Volver</button>
+			</mat-card-content>
+		</mat-card>
+	</div>
 }
 
 

@@ -1,9 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/*utiliza todo el espacio que tenga disponible*/
 .spacer {
   flex: 1 1 auto;
+}
+
+/* Quita radios en todo el “shell” */
+mat-sidenav-container,
+.mat-drawer-container,
+.mat-drawer,
+.mat-drawer-inner-container,
+.mat-drawer-content,
+mat-sidenav {
+  border-radius: 0 !important;
 }

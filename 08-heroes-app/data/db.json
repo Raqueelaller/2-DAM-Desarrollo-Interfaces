@@ -166,6 +166,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "LiHfmUS",
+      "superhero": "Nico Robin",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Miss All Sunday",
+      "first_appearance": "Alabasta",
+      "characters": "Robin",
+      "alt_img": "https://areajugones.sport.es/wp-content/uploads/2024/12/nico-robin-one-piece-3-1-1-1560x880.jpg.webp"
+    },
+    {
+      "id": "PaJJL_R",
+      "superhero": "Monkey D. Luffy",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Lucy",
+      "first_appearance": "East blue",
+      "characters": "Luffy",
+      "alt_img": "https://media.printler.com/media/photo/140781.jpg?rmode=crop&width=725&height=1024"
     }
   ]
 }

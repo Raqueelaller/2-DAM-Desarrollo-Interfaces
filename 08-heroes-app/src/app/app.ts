@@ -1,19 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { share } from 'rxjs';
 import { SharedModule } from './shared/shared-module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,
-    SharedModule,
-
-
+  imports: [
+    RouterOutlet,
+    SharedModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-
 export class App {
-  protected readonly title = signal('08-heroes-app');
+  protected readonly title = signal('04-heroes-app');
 }
