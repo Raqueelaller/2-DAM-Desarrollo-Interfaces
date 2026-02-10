@@ -96,6 +96,26 @@ export class NewPageComponent implements OnInit {
 
   }
 
+  onDeleteHero(): void {
+
+  const id = this.currentHero.id;
+
+  if (!id) return;
+
+  this.heroService.deleteHeroById(id)
+    .subscribe((wasDeleted) => {
+
+      if (wasDeleted) {
+        this.showSnackBar(`${this.currentHero.superhero} eliminado correctamente`);
+        this.router.navigate(['/heroes/list']);
+        return;
+      }
+
+      this.showSnackBar(`No se pudo eliminar`);
+    });
+}
+
+
   private showSnackBar (message : string): void{
   this.snackBar.open(message, 'ok', {
     duration : 2500
