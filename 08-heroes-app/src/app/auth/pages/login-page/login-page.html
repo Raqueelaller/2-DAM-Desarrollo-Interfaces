@@ -3,7 +3,7 @@
 
   <mat-form-field>
     <mat-label>Usuario</mat-label>
-    <input type="text" matInput placeholder="Nombre de usuario">
+    <input type="text" matInput placeholder="Usuario">
   </mat-form-field>
 
   <mat-form-field>
@@ -11,13 +11,12 @@
     <input type="password" matInput placeholder="Contraseña">
   </mat-form-field>
 
-  <button mat-button mat-flat-button color="primary">
-    <mat-icon>save</mat-icon>
+  <button matButton="elevated" color="primary" (click)="onLogin()">
+    <mat-icon>login</mat-icon>
     Acceder
   </button>
 
-  <div class="flex justify-content-end mt-5">
+  <div class="flex justify-content-end md-5">
     <a routerLink="/auth/new-account">No tengo cuenta de usuario</a>
   </div>
-
 </div>

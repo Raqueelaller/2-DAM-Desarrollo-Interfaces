@@ -6,13 +6,13 @@ import { RegisterPageComponent } from './pages/register-page/register-page';
 
 const routes: Routes = [
   {
-    // locahost:4200/auth/
+    //  localhost:4200/auth/
     path: '',
     component: LayoutPageComponent,
     children: [
       { path: 'login', component: LoginPageComponent },
       { path: 'new-account', component: RegisterPageComponent },
-      { path: '**', redirectTo: 'login' },
+      { path: '**', redirectTo: "login" }
     ]
   }
 ];
